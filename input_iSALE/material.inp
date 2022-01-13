@@ -1,0 +1,84 @@
+#ISMAT
+--------------------------------------------------------
+MATNAME       Material name                 : granite      : dunite_      : calcite      : H2O_ice   
+EOSNAME       EOS name                      : granit2      : dunite_      : calcite      : ice____   
+EOSTYPE       EOS type                      : aneos        : aneos        : aneos        : tillo     
+STRMOD        Strength model                : ROCK         : ROCK         : ROCK         : ICE       
+DAMMOD        Damage model                  : IVANOV       : IVANOV       : IVANOV       : IVANOV    
+ACFL          Acoustic fluidisation         : BLOCK        : BLOCK        : BLOCK        : BLOCK     
+PORMOD        Porosity model                : NONE         : NONE         : NONE         : NONE      
+THSOFT        Thermal softening             : OHNAKA       : OHNAKA       : OHNAKA       : OHNAKA    
+LDWEAK        Low density weakening         : POLY         : POLY         : POLY         : POLY      
+VISCO         Viscoelasticity               : NONE         : NONE         : NONE         : NONE      
+-----------------------------------------------------------------------   ------------   ------------
+POIS          pois                          : 3.0000D-01   : 2.5000D-01   : 3.0000D-01   : 5.0000D-01
+TMELT0        tmelt0                        : 1.6730D+03   : 1.3730D+03   : 1.5000D+03   : 0.2730D+03
+TFRAC         tfrac                         : 1.2000D+00   : 1.2000D+00   : 1.2000D+00   : 1.2000D+00
+ASIMON        a_simon                       : 6.0000D+09   : 1.5200D+09   : 6.0000D+09   : 6.0000D+09
+CSIMON        c_simon                       : 3.0000D+00   : 4.0500D+00   : 3.0000D+00   : 3.0000D+00
+YDAM0         ydam0 (ycoh)                  : 1.0000D+04   : 1.0000D+04   : 1.0000D+04   : 5.0000D+05
+FRICDAM       fricdam                       : 6.0000D-01   : 6.0000D-01   : 4.0000D-01   : 6.0000D-01
+YLIMDAM       ylimdam                       : 2.5000D+09   : 3.5000D+09   : 5.0000D+08   : 1.1000D+08
+YINT0         yint0                         : 1.0000D+07   : 1.0000D+07   : 5.0000D+06   : 1.0000D+07
+FRICINT       fricint                       : 2.0000D+00   : 1.2000D+00   : 1.0000D+00   : 2.0000D+00
+YLIMINT       ylimint                       : 2.5000D+09   : 3.5000D+09   : 5.0000D+08   : 1.1000D+08
+BDTPRES       bdt_pres                      : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx
+BPTPRES       bpt_pres                      : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx
+-----------------------------------------------------------------------   ------------   ------------
+IVANOV_A      Damage parameter              : 1.0000D-04   : 1.0000D-04   : 1.0000D-04   : 1.0000D-04 
+IVANOV_B      Damage parameter              : 1.0000D-11   : 1.0000D-11   : 1.0000D-11   : 1.0000D-11 
+IVANOV_C      Damage parameter              : 3.0000D+08   : 3.0000D+08   : 3.0000D+08   : 3.0000D+08 
+-----------------------------------------------------------------------   ------------   ------------
+GAMETA        gam_eta                       : 8.0000D-03   : 8.0000D-02   : 0.0000D-03   : 6.9200D-02 
+GAMBETA       gam_beta                      : 1.1500D+02   : 0.5000D+02   : 0.0000D+02   : 1.1000D+03 
+<<END        
+
+
+
+
+
+: mygrani          : granite      : dunite_      : calcite      : atmosph      : H2O_ice   
+: granite          : granit2      : dunite_      : calcite      : dry_air      : ice____   
+: tillo            : aneos        : aneos        : aneos        : tillo        : tillo     
+: ROCK             : ROCK         : ROCK         : ROCK         : HYDRO        : ICE       
+: COLLINS          : IVANOV       : IVANOV       : IVANOV       : NONE         : IVANOV    
+: BLOCK            : BLOCK        : BLOCK        : BLOCK        : NONE         : BLOCK     
+: NONE             : NONE         : NONE         : NONE         : NONE         : NONE      
+: OHNAKA           : OHNAKA       : OHNAKA       : OHNAKA       : NONE         : OHNAKA    
+: POLY             : POLY         : POLY         : POLY         : NONE         : POLY      
+: NONE             : NONE         : NONE         : NONE         : NONE         : NONE      
+----------------------------------------------   ------------   ------------   ------------
+: 3.D-01           : 3.0000D-01   : 2.5000D-01   : 3.0000D-01   : 5.0000D-01   : 5.0000D-01
+: 1.673D+03        : 1.6730D+03   : 1.3730D+03   : 1.5000D+03   : xxxxxxxxxx   : 0.2730D+03
+: 1.2D+00          : 1.2000D+00   : 1.2000D+00   : 1.2000D+00   : xxxxxxxxxx   : 1.2000D+00
+: 6.D+09           : 6.0000D+09   : 1.5200D+09   : 6.0000D+09   : xxxxxxxxxx   : 6.0000D+09
+: 3.D+00           : 3.0000D+00   : 4.0500D+00   : 3.0000D+00   : xxxxxxxxxx   : 3.0000D+00
+: 1.D+04           : 1.0000D+04   : 1.0000D+04   : 1.0000D+04   : xxxxxxxxxx   : 5.0000D+05
+: 8.D-01           : 6.0000D-01   : 6.0000D-01   : 4.0000D-01   : xxxxxxxxxx   : 6.0000D-01
+: 2.D+09           : 2.5000D+09   : 3.5000D+09   : 5.0000D+08   : xxxxxxxxxx   : 1.1000D+08
+: 1.D+07           : 1.0000D+07   : 1.0000D+07   : 5.0000D+06   : xxxxxxxxxx   : 1.0000D+07
+: 1.1D+00          : 2.0000D+00   : 1.2000D+00   : 1.0000D+00   : xxxxxxxxxx   : 2.0000D+00
+: 2.5D+09          : 2.5000D+09   : 3.5000D+09   : 5.0000D+08   : xxxxxxxxxx   : 1.1000D+08
+: -1.D+00          : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx
+: -1.D+00          : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx   : xxxxxxxxxx
+----------------------------------------------   ------------   ------------   ------------
+: xxxxxxxxxx       : 1.0000D-04   : 1.0000D-04   : 1.0000D-04   : xxxxxxxxxx   : 1.0000D-04
+: xxxxxxxxxx       : 1.0000D-11   : 1.0000D-11   : 1.0000D-11   : xxxxxxxxxx   : 1.0000D-11
+: xxxxxxxxxx       : 3.0000D+08   : 3.0000D+08   : 3.0000D+08   : xxxxxxxxxx   : 3.0000D+08
+----------------------------------------------   ------------   ------------   ------------
+: 8.D-03           : 8.0000D-03   : 8.0000D-02   : 0.0000D-03   : xxxxxxxxxx   : 6.9200D-02
+: 1.15D+02         : 1.1500D+02   : 0.5000D+02   : 0.0000D+02   : xxxxxxxxxx   : 1.1000D+03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
