@@ -1,0 +1,88 @@
+#ISINP
+------------------------------------------------------------------------
+--- this is the new input file used by iSALE versions of v7.0 and higher
+------------------------------------------------------------------------
+--- lines beginning with '-' or '!' are treated as comments and not
+--- further processed. The difference between the two comment lines
+--- is, lines starting with '-' will appear also in the backup of this
+--- input file and in the header of the jpeg-file, whereas lines
+--- beginning with '!' are completely removed from these files.
+------------------------------------------------------------------------
+--- First 8 columns are reserved for short parameter identification  ---
+--- (available abbreviations are found in the documentation)         ---
+---                                                                  ---
+--- The next 20 columns are reserved for parameter description!      ---
+---                                                                  ---
+------------------- General Model Info ---------------------------------
+VERSION       __DO NOT MODIFY__             : 4.1
+DIMENSION     dimension of input file       : 2
+PATH          Data file path                : ./
+MODEL         Modelname                     : petm
+------------------- Mesh Geometry Parameters ---------------------------
+GRIDH         horizontal cells              : 0           : 250         : 20
+GRIDV         vertical cells                : 45          : 230         : 60
+GRIDEXT       ext. factor                   : 1.03d0
+GRIDSPC       grid spacing                  : 200.D0
+GRIDSPCM      max. grid spacing             : -20.D0
+------------------- Global Setup Parameters ----------------------------
+S_TYPE        setup type                    : DEFAULT
+ALE_MODE      ALE modus                     : EULER
+T_SURF        Surface temp                  : 299.0D0
+DTDZSURF      Temp. grad. surf.             : 10.D-3
+D_LITH        Lithosp. thickness            : 80.D3
+R_PLANET      Planet radius                 : 6370.D0
+GRAV_V        gravity                       : -9.81D0
+GRAD_TYPE     gradient type                 : DEFAULT
+GRAD_DIM      gradient dimension            : 2
+- P_SURF                Pressure at top of layer      : 3.32D-1
+- LP_TOLER              Pressure tolerance            : 1.D-6
+- LP_ROHIGH             density upper limit           : 1.3D0
+- LP_ROLOW              density lower limit           : 1.D-11
+- ROCUTOFF              density Cut off               : 0.0
+------------------- Projectile Parameters ------------------------------
+OBJNUM        number of proj.               : 1
+OBJRESH       CPPR horizontal               : 60           : 4
+OBJVEL        object velocity               : -17.D3      : -20.D3
+OBJMAT        object material               : dunite_     : granite
+OBJTYPE       object type                   : SPHEROID    : SPHEROID
+OBJTPROF      object temp prof              : CONST       : CONST
+OBJOFF_V      proj offset (ver)             : 0           : 6
+------------------- Target Parameters ----------------------------------
+LAYNUM        number of layers              : 3
+LAYPOS        layer position                : 45          : 195         : 209
+LAYMAT        layer material                : dunite_     : granite     : calcite
+LAYTPROF      layer therm. prof             : CONST       : CONST       : CONST
+------------------- Time Parameters ------------------------------------
+DT            initial time increment        : 1.0D-1
+DTMAX         maximum timestep              : 5.0D-1
+TEND          end time                      : 5.D0
+DTSAVE        save interval                 : 1.0D-1
+------------------- Boundary Conditions --------------------------------
+BND_L         left                          : FREESLIP
+BND_R         right                         : OUTFLOW
+BND_B         bottom                        : FREESLIP
+BND_T         top                           : OUTFLOW
+------------------- Tracer Particle Parameters -------------------------
+--- if TR_SAVE == 1, only Trx and Try are automatically added to
+--- the variable list. If additional variables shall be calculated
+--- and stored, you have to set them in 'Tracer fields'.
+-------- TR_NX/NY is the number of tracers in x/y-direction
+-------  TR_DX/DY is the interval between tracers (usually the same as dx/dy)
+TR_QUAL       integration qual.             : 1
+TR_SPCH       tracer spacing X              : -1.D0       : -1.D0       : -1.D0
+TR_SPCV       tracer spacing Y              : -1.D0       : -1.D0       : -1.D0
+TR_VAR        add. tracer fiels             : #TrP-TrT-Trd-TrM-Trp-Trt-TrV-TrE-Tre#
+------------------- Numerical Stability Parameters ---------------------
+AVIS          art. visc. linear             : 0.24D0
+AVIS2         art. visc. quad.              : 1.2D0
+------------------- Ac. Fluid. Parameters (read in read_material) ------
+CVIB          c_vib                         : 0.1D0
+TOFF          toff                          : 16.D0
+VIB_MAX       Max. vib.vel.                 : 200.D0
+------------------- Data Saving Parameters -----------------------------
+QUALITY       Compression rate              : -50
+VARLIST       List of variables             : #Den-Pre-Sie-Tmp-VEL#
+-------------------- Control Parameters --------------------------------
+STRESS        calc_stress                   : 1
+------------------------------------------------------------------------
+<<END
